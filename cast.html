@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MurderBallad</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows:105px 45px 800px 32px;
+            grid-template-areas:
+                "a a a a a"
+                "b b b b b"
+                "c d d d e"
+                "f f f f f";
+        }
+        .a{
+            grid-area:a;
+            background-color:black;
+            padding-top:5px;
+            border-left:2px solid white;
+            border-right:2px solid white;
+        }
+        img{
+            display:block;
+            margin:0 auto;
+        }
+        .b{
+            grid-area:b;
+            border-left:2px solid white;
+            border-right:2px solid white;
+            
+        }
+        #b{
+            border-top:2px solid black;
+            border-bottom:2px solid black;
+            margin-top:5px;
+            margin-bottom:2px;
+            text-align:center;
+        }
+        #b div{
+            display:inline;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        #c{
+            grid-area:c;
+            background-color:black;
+            border:6px double white;
+            display:block;
+            text-align: center;
+        }
+        #c p{
+            color:black;
+            font-size:30px;
+            letter-spacing:3px;
+            text-shadow:1px 1px 0 rgb(140, 29, 85), -1px 1px 0 rgb(140, 29, 85), 1px -1px 0 rgb(140, 29, 85), -1px -1px 0 rgb(140, 29, 85);
+            font-family:Haettenschweiler;
+            margin-top:170px;
+        }
+        #c a{
+            display:block;
+            text-align: center;
+            color:black;
+            font-size:30px;
+            letter-spacing:3px;
+            text-shadow:1px 1px 0 rgb(140, 29, 85), -1px 1px 0 rgb(140, 29, 85), 1px -1px 0 rgb(140, 29, 85), -1px -1px 0 rgb(140, 29, 85);
+            margin-top:60px;
+        }
+        #c a:link{
+            text-decoration: none;
+        }
+        #c a:visited{
+            text-decoration: none;
+        }
+        #c a:hover{
+            text-decoration: none;
+        }
+        #c a:active{
+            text-decoration: none;
+        }
+        #d{
+            grid-area:d;
+            margin-left:1.5px;
+            margin-right:1.5px;
+            background-color:black;
+            border:6px double white;
+            background-image: url(머발.jpg);
+            background-size:cover;
+        }
+        #e{
+            grid-area:e;
+            background-color:black;
+            border:6px double white;
+        }
+        #f{
+            grid-area:f;
+            font-size:11pt;
+            text-align:center;
+            background-color:black;
+            color:rgb(223, 223, 223);
+            padding-top:4pt;
+            margin-top:3px;
+            border-left:2px solid white;
+            border-right:2px solid white;
+        }
+        #e{
+            font-family:Lucida Fax;
+            text-align: center;
+        }
+        #e1{
+            height:23px;
+        }
+        #e2{
+            height:16px;
+        }
+        #e3{
+            height:36px;
+        }
+        #e4{
+            height:25px;
+        }
+        #e5{
+            height:19px;
+        }
+        #e6{
+            height:14px;
+        }
+        #e7{
+            height:23px;
+        }
+        #e8{
+            height:17px;
+        }
+        #f span{
+            font-size:7pt;
+            color:rgb(178, 13, 107);
+        }
+        a{
+            font-family:Haettenschweiler, Bernard MT;
+            font-size:30px;
+        }
+        a:link{
+            color:blue;
+            text-decoration:none;
+        }
+        a:visited{
+            color:blue;
+            text-decoration:none;
+        }
+        a:hover{
+            color:rgb(0, 255, 136);
+            text-decoration:none;
+        }
+        a:active{
+            color:rgb(0, 255, 136);
+            text-decoration:none;
+        }
+        #e a{
+            display:block;
+            padding-top:20px;
+            padding-bottom:45px;
+        }
+        #e p{
+            color:white;
+            font-size:15pt;
+            margin-top:45px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a">
+            <div id="a">
+                <a href ="main.html">
+                    <img src="로고.jpg" height="100px">
+                </a>
+            </div>
+        </div>
+        <div class="b">
+            <div id="b">
+                <div><a href="main.html">HOME</a></div>
+                <div><a href="1.html">ABOUT THE SHOW</a></div>
+                <div><a href="cast.html">CAST</a></div>
+                <div><a href="media.html">MEDIA</a></div>
+                <div><a href="login.html">LOGIN</a></div>
+            </div>
+        </div>
+        <div id="c">
+            <p><b>- CAST -</b></p>
+            <a onclick = "fetch('cast1.html').then(function(response){
+                response.text().then(function(text){
+                document.querySelector('#d').innerHTML=text;
+                })
+                });"><b>TOM</b></a>
+            <a onclick = "fetch('cast2.html').then(function(response){
+                response.text().then(function(text){
+                document.querySelector('#d').innerHTML=text;
+                })
+                });"><b>SARA</b></a>
+            <a onclick = "fetch('cast3.html').then(function(response){
+                response.text().then(function(text){
+                document.querySelector('#d').innerHTML=text;
+                })
+                });"><b>MICHAEL</b></a>
+            
+            <a onclick = "fetch('cast4.html').then(function(response){
+                response.text().then(function(text){
+                document.querySelector('#d').innerHTML=text;
+                })
+                });"><b>NARRATOR</b></a>
+        </div>
+        <div id="d">
+        </div>
+        <div id="e">
+            <p>TICKET</p>
+            <a href="http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=P0002368" target="_blank">
+                <img src="인터파크.png" id="e1">
+            </a>
+            <a href="https://ticket.melon.com/performance/index.htm?prodId=205328" target="_blank">
+                <img src="멜론티켓.png" id="e2">
+            </a>
+            <a href="http://ticket.yes24.com/Perf/37137" target="_blank">
+                <img src="예스24.png" id="e3">
+            </a>
+            <a href="http://www.ticketlink.co.kr/product/31722" target="_blank">
+                <img src="티켓링크.jpg" id="e4">
+            </a>
+            <a href="http://ticket.hanatour.com/Pages/Perf/Detail/Detail.aspx?idperf=38053" target="_blank">
+                <img src="하나티켓.png" id="e5">
+            </a>
+            <a href="http://ticket1.auction.co.kr/VIP/Item?IdPerf=38211" target="_blank">
+                <img src="옥션.png" id="e6">
+            </a>
+            <a href="https://www.clipservice.co.kr/Clipservice/Ticket/ShowDetail?playNum=74751" target="_blank">
+                <img src="클립.png" id="e7"></a>
+            <a href="http://ticket.11st.co.kr/Product/Detail?id=264384" target="_blank">
+                <img src="11번가.png" id="e8"></a>
+        </div>
+        <div id="f">
+            <b>2020.08.11<span><sup>TUE</sup></span>~ 2020.11.15<span><sup>SUN</sup></span> 세종S씨어터</b>    
+        </div>
+    </div>
+</body>
+</html>
